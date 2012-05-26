@@ -1,0 +1,37 @@
+// This is the file where you should try to attach your styles to semantic
+// elements.
+
+// Debug styles
+#demo-grid {
+  .left, .right {
+    background-color: #efefef;
+    p {
+      margin: 0.5em;
+      padding: 0.5em;
+      background-color: #cfcfcf;
+      overflow: hidden;
+    }
+  }
+}
+
+#demo-grid  {
+  .line1, .line2, .line3, .line4, .line5, .line6 {
+    //#grid.row(400px, 66%);
+    //#grid.row(100%, 100%);
+    #grid.row();
+    margin-bottom: 0.25em;
+  }
+}
+
+#demo-grid .line1 .left { #grid.one-col(); }
+#demo-grid .line1 .right { #grid.eleven-col(); }
+#demo-grid .line2 .left { #grid.two-col(); }
+#demo-grid .line2 .right { #grid.ten-col(); }
+#demo-grid .line3 .left { #grid.three-col(); }
+#demo-grid .line3 .right { #grid.nine-col(); }
+#demo-grid .line4 .left { #grid.four-col(); }
+#demo-grid .line4 .right { #grid.eight-col(); }
+#demo-grid .line5 .left { #grid.five-col(); }
+#demo-grid .line5 .right { #grid.seven-col(); }
+#demo-grid .line6 .left { #grid.six-col(); }
+#demo-grid .line6 .right { #grid.six-col(); }
