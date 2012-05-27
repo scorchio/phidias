@@ -3,19 +3,30 @@
 @gutter: 4.4%;
 
 #grid {
-  .col () {
-    margin-left: @gutter; float: left; min-height: 1px; position: relative;
-    &:first-child { margin-left: 0; }
+  .col() {
+    margin-left: @gutter;
+    float: left;
+    min-height: 1px;
+    position: relative;
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
-	.row (@min-width: @default-min-width,
+	.row(@min-width: @default-min-width,
         @max-width: @default-max-width) {
 	  width: 100%; max-width: @max-width; min-width: @min-width; margin: 0 auto;
     overflow: auto;
   }
 
-  .subrow () { min-width: 0; }
-  .centered () { float: none; margin: 0 auto; }
+  .subrow() {
+    min-width: 0;
+  }
+
+  .centered() {
+    float: none;
+    margin: 0 auto;
+  }
 
   @one-col-width: (100% - 11 * @gutter) / 12;
   @two-col-width: @one-col-width * 2 + @gutter;
@@ -30,31 +41,142 @@
   @eleven-col-width: @one-col-width * 11 + @gutter * 10;
   @twelve-col-width: @one-col-width * 12 + @gutter * 11;
 
-  .one-col () { .col(); width: @one-col-width; }
-  .two-col () { .col(); width: @two-col-width; }
-  .three-col () { .col(); width: @three-col-width; }
-  .four-col () { .col(); width: @four-col-width; }
-  .five-col () { .col(); width: @five-col-width; }
-  .six-col () { .col(); width: @six-col-width; }
-  .seven-col () { .col(); width: @seven-col-width; }
-  .eight-col () { .col(); width: @eight-col-width; }
-  .nine-col () { .col(); width: @nine-col-width; }
-  .ten-col () { .col(); width: @ten-col-width; }
-  .eleven-col () { .col(); width: @eleven-col-width; }
-  .twelve-col () { .col(); width: @twelve-col-width; }
+  .one-col() {
+    .col();
+    width: @one-col-width;
+  }
+
+  .two-col() {
+    .col();
+    width: @two-col-width;
+  }
+
+  .three-col() {
+    .col();
+    width: @three-col-width;
+  }
+
+  .four-col() {
+    .col();
+    width: @four-col-width;
+  }
+
+  .five-col() {
+    .col();
+    width: @five-col-width;
+  }
+
+  .six-col() {
+    .col();
+    width: @six-col-width;
+  }
+
+  .seven-col() {
+    .col();
+    width: @seven-col-width;
+  }
+
+  .eight-col() {
+    .col();
+    width: @eight-col-width;
+  }
+
+  .nine-col() {
+    .col();
+    width: @nine-col-width;
+  }
+
+  .ten-col() {
+    .col();
+    width: @ten-col-width;
+  }
+
+  .eleven-col() {
+    .col();
+    width: @eleven-col-width;
+  }
+
+  .twelve-col() {
+    .col();
+    width: @twelve-col-width;
+  }
 
   // @TODO: translate percentages back for the rest
-  .offset-by-one ()	{ margin-left: 13.1%; &:first-child { margin-left: 8.7%;  } }
-  .offset-by-two ()	{ margin-left: 21.8%; &:first-child { margin-left: 17.4%;  }  }
-  .offset-by-three ()	{ margin-left: 30.5%; &:first-child { margin-left: 26.1%;  } }
-  .offset-by-four ()	{ margin-left: 39.2%; &:first-child { margin-left: 34.8%;  } }
-  .offset-by-five ()	{ margin-left: 47.9%; &:first-child {  margin-left: 43.5%;  } }
-  .offset-by-six ()	{ margin-left: 56.6%; &:first-child {  margin-left: 52.2%;  } }
-  .offset-by-seven ()	{ margin-left: 65.3%; &:first-child { margin-left: 60.9%;  } }
-  .offset-by-eight ()	{ margin-left: 74.0%; &:first-child { margin-left: 69.6%;  } }
-  .offset-by-nine ()	{ margin-left: 82.7%; &:first-child { margin-left: 78.3%;  } }
-  .offset-by-ten ()	{ margin-left: 91.4%; &:first-child { margin-left: 87%;  } }
-  .offset-by-eleven () { &:first-child { margin-left: 95.7%; }  }
+  .offset-by-one() {
+    margin-left: 13.1%;
+    &:first-child {
+      margin-left: 8.7%;
+    }
+  }
+
+  .offset-by-two() {
+    margin-left: 21.8%;
+    &:first-child {
+      margin-left: 17.4%;
+    }
+  }
+
+  .offset-by-three() {
+    margin-left: 30.5%;
+    &:first-child {
+      margin-left: 26.1%;
+    }
+  }
+
+  .offset-by-four() {
+    margin-left: 39.2%;
+    &:first-child {
+      margin-left: 34.8%;
+    }
+  }
+
+  .offset-by-five() {
+    margin-left: 47.9%;
+    &:first-child {
+      margin-left: 43.5%;
+    }
+  }
+
+  .offset-by-six() {
+    margin-left: 56.6%;
+    &:first-child {
+      margin-left: 52.2%;
+    }
+  }
+
+  .offset-by-seven() {
+    margin-left: 65.3%;
+    &:first-child {
+      margin-left: 60.9%;
+    }
+  }
+
+  .offset-by-eight() {
+    margin-left: 74.0%;
+    &:first-child {
+      margin-left: 69.6%;
+    }
+  }
+
+  .offset-by-nine() {
+    margin-left: 82.7%;
+    &:first-child {
+      margin-left: 78.3%;
+    }
+  }
+
+  .offset-by-ten() {
+    margin-left: 91.4%;
+    &:first-child {
+      margin-left: 87%;
+    }
+  }
+
+  .offset-by-eleven() {
+    &:first-child {
+      margin-left: 95.7%;
+    }
+  }
 
   .push-two ()   { left: 17.4% }
  	.push-three () { left: 26.1%; }
