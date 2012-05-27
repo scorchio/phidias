@@ -69,100 +69,77 @@
   .eleven-col ()  { .col(); .eleven-col-width(); }
   .twelve-col ()  { .col(); .twelve-col-width(); }
   
-  // @TODO: translate percentages back for the rest
   .offset-by-one () {
-    margin-left: 13.1%;
-    &:first-child {
-      margin-left: 8.7%;
-    }
+    margin-left: @one-col-width + @gutter * 2;
+    &:first-child { margin-left: @one-col-width + @gutter; }
   }
 
   .offset-by-two () {
-    margin-left: 21.8%;
-    &:first-child {
-      margin-left: 17.4%;
-    }
+    margin-left: (@one-col-width + @gutter) * 2 + @gutter;
+    &:first-child { margin-left: (@one-col-width + @gutter) * 2; }
   }
 
   .offset-by-three () {
-    margin-left: 30.5%;
-    &:first-child {
-      margin-left: 26.1%;
-    }
+    margin-left: (@one-col-width + @gutter) * 3 + @gutter;
+    &:first-child { margin-left: (@one-col-width + @gutter) * 3; }
   }
 
   .offset-by-four () {
-    margin-left: 39.2%;
-    &:first-child {
-      margin-left: 34.8%;
-    }
+    margin-left: (@one-col-width + @gutter) * 4 + @gutter;
+    &:first-child { margin-left: (@one-col-width + @gutter) * 4; }
   }
 
   .offset-by-five () {
-    margin-left: 47.9%;
-    &:first-child {
-      margin-left: 43.5%;
-    }
+    margin-left: (@one-col-width + @gutter) * 5 + @gutter;
+    &:first-child { margin-left: (@one-col-width + @gutter) * 5; }
   }
 
   .offset-by-six () {
-    margin-left: 56.6%;
-    &:first-child {
-      margin-left: 52.2%;
-    }
+    margin-left: (@one-col-width + @gutter) * 6 + @gutter;
+    &:first-child { margin-left: (@one-col-width + @gutter) * 6; }
   }
 
   .offset-by-seven () {
-    margin-left: 65.3%;
-    &:first-child {
-      margin-left: 60.9%;
-    }
+    margin-left: (@one-col-width + @gutter) * 7 + @gutter;
+    &:first-child { margin-left: (@one-col-width + @gutter) * 7; }
   }
 
   .offset-by-eight () {
-    margin-left: 74.0%;
-    &:first-child {
-      margin-left: 69.6%;
-    }
+    margin-left: (@one-col-width + @gutter) * 8 + @gutter;
+    &:first-child { margin-left: (@one-col-width + @gutter) * 8; }
   }
 
   .offset-by-nine () {
-    margin-left: 82.7%;
-    &:first-child {
-      margin-left: 78.3%;
-    }
+    margin-left: (@one-col-width + @gutter) * 9 + @gutter;
+    &:first-child { margin-left: (@one-col-width + @gutter) * 9; }
   }
 
   .offset-by-ten () {
-    margin-left: 91.4%;
-    &:first-child {
-      margin-left: 87%;
-    }
+    margin-left: (@one-col-width + @gutter) * 10 + @gutter;
+    &:first-child { margin-left: (@one-col-width + @gutter) * 10; }
   }
 
   .offset-by-eleven () {
-    &:first-child {
-      margin-left: 95.7%;
-    }
+    &:first-child { margin-left: (@one-col-width + @gutter) * 11; }
   }
 
-  .push-two ()   { left: 2 * (@one-col-width + @gutter); }
- 	.push-three () { left: 3 * (@one-col-width + @gutter); }
- 	.push-four ()  { left: 4 * (@one-col-width + @gutter); }
- 	.push-five ()	 { left: 5 * (@one-col-width + @gutter); }
- 	.push-six ()	 { left: 6 * (@one-col-width + @gutter); }
- 	.push-seven () { left: 7 * (@one-col-width + @gutter); }
- 	.push-eight () { left: 8 * (@one-col-width + @gutter); }
- 	.push-nine ()  { left: 9 * (@one-col-width + @gutter); }
- 	.push-ten ()   { left: 10 * (@one-col-width + @gutter); }
+  .push-two ()   { left: (@one-col-width + @gutter) * 2; }
+ 	.push-three () { left: (@one-col-width + @gutter) * 3; }
+ 	.push-four ()  { left: (@one-col-width + @gutter) * 4; }
+ 	.push-five ()	 { left: (@one-col-width + @gutter) * 5; }
+ 	.push-six ()	 { left: (@one-col-width + @gutter) * 6; }
+ 	.push-seven () { left: (@one-col-width + @gutter) * 7; }
+ 	.push-eight () { left: (@one-col-width + @gutter) * 8; }
+ 	.push-nine ()  { left: (@one-col-width + @gutter) * 9; }
+ 	.push-ten ()   { left: (@one-col-width + @gutter) * 10; }
 
-  .pull-two ()   { right: 2 * (@one-col-width + @gutter); }
- 	.pull-three () { right: 3 * (@one-col-width + @gutter); }
- 	.pull-four ()  { right: 4 * (@one-col-width + @gutter); }
- 	.pull-five ()	 { right: 5 * (@one-col-width + @gutter); }
- 	.pull-six ()	 { right: 6 * (@one-col-width + @gutter); }
- 	.pull-seven () { right: 7 * (@one-col-width + @gutter); }
- 	.pull-eight () { right: 8 * (@one-col-width + @gutter); }
- 	.pull-nine ()  { right: 9 * (@one-col-width + @gutter); }
- 	.pull-ten ()   { right: 10 * (@one-col-width + @gutter); }
+  .pull-two ()   { right: (@one-col-width + @gutter) * 2; }
+ 	.pull-three () { right: (@one-col-width + @gutter) * 3; }
+ 	.pull-four ()  { right: (@one-col-width + @gutter) * 4; }
+ 	.pull-five ()	 { right: (@one-col-width + @gutter) * 5; }
+ 	.pull-six ()	 { right: (@one-col-width + @gutter) * 6; }
+ 	.pull-seven () { right: (@one-col-width + @gutter) * 7; }
+ 	.pull-eight () { right: (@one-col-width + @gutter) * 8; }
+ 	.pull-nine ()  { right: (@one-col-width + @gutter) * 9; }
+ 	.pull-ten ()   { right: (@one-col-width + @gutter) * 10; }
 }
