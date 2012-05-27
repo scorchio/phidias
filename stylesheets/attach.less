@@ -1,21 +1,33 @@
 // This is the file where you should try to attach your styles to semantic
 // elements.
 
+// Decorative mixins
+.rounded-corners (@radius: 5px) {
+    border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+}
+
 // Debug styles
 #demo-grid {
   .left, .right {
-    background-color: #efefef;
+    background-color: @base2;
+    .rounded-corners(3px);
     p {
       margin: 0.5em;
       padding: 0.5em;
-      background-color: #cfcfcf;
+      color: @base3;
+      background-color: @blue;
       overflow: hidden;
+      .rounded-corners(3px);
     }
   }
 }
 
 #demo-grid  {
-  .line1, .line2, .line3, .line4, .line5, .line6 {
+  .line1, .line2, .line3, .line4, .line5, .line6,
+  .line7, .line8, .line9, .line10, .line10, .line11
+  .line12, .line13, .line14, .line15, .line16, .line17 {
     //#grid.row(400px, 66%);
     //#grid.row(100%, 100%);
     #grid.row();
@@ -23,6 +35,7 @@
   }
 }
 
+// basic stuff
 #demo-grid .line1 .left { #grid.one-col(); }
 #demo-grid .line1 .right { #grid.eleven-col(); }
 #demo-grid .line2 .left { #grid.two-col(); }
@@ -35,3 +48,18 @@
 #demo-grid .line5 .right { #grid.seven-col(); }
 #demo-grid .line6 .left { #grid.six-col(); }
 #demo-grid .line6 .right { #grid.six-col(); }
+
+
+// columns with offsets
+
+#demo-grid .line7 .left { #grid.three-col(); #grid.offset-by-one(); }
+#demo-grid .line8 .left { #grid.three-col(); #grid.offset-by-two(); }
+#demo-grid .line9 .left { #grid.three-col(); #grid.offset-by-three(); }
+#demo-grid .line10 .left { #grid.three-col(); #grid.offset-by-four(); }
+#demo-grid .line11 .left { #grid.three-col(); #grid.offset-by-five(); }
+#demo-grid .line12 .left { #grid.three-col(); #grid.offset-by-six(); }
+#demo-grid .line13 .left { #grid.three-col(); #grid.offset-by-seven(); }
+#demo-grid .line14 .left { #grid.three-col(); #grid.offset-by-eight(); }
+#demo-grid .line15 .left { #grid.three-col(); #grid.offset-by-nine(); }
+#demo-grid .line16 .left { #grid.two-col(); #grid.offset-by-ten(); }
+#demo-grid .line17 .left { #grid.one-col(); #grid.offset-by-eleven(); }
