@@ -10,7 +10,9 @@
 
 // Debug styles
 #demo-grid {
-  .left, .right {
+  .left, .right, .middle,
+  .first, .second, .third, .fourth,
+  .fifth, .sixth {
     background-color: @base2;
     .rounded-corners(3px);
     p {
@@ -25,9 +27,7 @@
 }
 
 #demo-grid  {
-  .line1, .line2, .line3, .line4, .line5, .line6,
-  .line7, .line8, .line9, .line10, .line11, .line12,
-  .line13, .line14, .line15, .line16, .line17 {
+  [class^=line] {
     //#grid.row(400px, 66%);
     //#grid.row(100%, 100%);
     #grid.row();
@@ -63,3 +63,21 @@
 #demo-grid .line15 .left { #grid.three-col(); #grid.offset-by-nine(); }
 #demo-grid .line16 .left { #grid.two-col(); #grid.offset-by-ten(); }
 #demo-grid .line17 .left { #grid.one-col(); #grid.offset-by-eleven(); }
+
+// push/pull
+
+#demo-grid .line18 .left { #grid.six-col(); #grid.push-six(); }
+#demo-grid .line18 .right { #grid.six-col(); #grid.pull-six(); }
+#demo-grid .line19 .left { #grid.four-col(); #grid.push-eight(); }
+#demo-grid .line19 .middle { #grid.four-col(); }
+#demo-grid .line19 .right { #grid.four-col(); #grid.pull-eight(); }
+#demo-grid .line20 .first { #grid.three-col(); #grid.push-nine(); }
+#demo-grid .line20 .second { #grid.three-col(); #grid.push-three(); }
+#demo-grid .line20 .third { #grid.three-col(); #grid.pull-three(); }
+#demo-grid .line20 .fourth { #grid.three-col(); #grid.pull-nine(); }
+#demo-grid .line21 .first { #grid.two-col(); #grid.push-ten(); }
+#demo-grid .line21 .second { #grid.two-col(); #grid.push-six(); }
+#demo-grid .line21 .third { #grid.two-col(); #grid.push-two(); }
+#demo-grid .line21 .fourth { #grid.two-col(); #grid.pull-two(); }
+#demo-grid .line21 .fifth { #grid.two-col(); #grid.pull-six(); }
+#demo-grid .line21 .sixth { #grid.two-col(); #grid.pull-ten; }
