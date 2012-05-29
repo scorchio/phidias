@@ -4,13 +4,21 @@
 
 #grid {
   .col () {
-    margin-left: @gutter;
+    .col-gutter();
     float: left;
     min-height: 1px;
     position: relative;
     &:first-child {
-      margin-left: 0;
+      .col-no-gutter();
     }
+  }
+
+  .col-gutter () {
+    margin-left: @gutter;
+  }
+
+  .col-no-gutter () {
+    margin-left: 0;
   }
 
   .row (@min-width: @default-min-width, @max-width: @default-max-width) {
@@ -134,6 +142,9 @@
   .push-nine ()   { left: (@one-col-width + @gutter) * 9; }
   .push-ten ()    { left: (@one-col-width + @gutter) * 10; }
   .push-eleven () { left: (@one-col-width + @gutter) * 11; }
+  .push-n (@n) when (isnumber(@n)) {
+    left: (@one-col-width + @gutter) * @n;
+  }
 
   .pull-one ()    { right: @one-col-width + @gutter; }
   .pull-two ()    { right: (@one-col-width + @gutter) * 2; }
@@ -146,4 +157,7 @@
   .pull-nine ()   { right: (@one-col-width + @gutter) * 9; }
   .pull-ten ()    { right: (@one-col-width + @gutter) * 10; }
   .pull-eleven () { right: (@one-col-width + @gutter) * 11; }
+  .pull-n (@n) when (isnumber(@n)) {
+    right: (@one-col-width + @gutter) * @n;
+  }
 }
