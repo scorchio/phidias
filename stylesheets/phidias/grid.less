@@ -1,15 +1,34 @@
+// Settings for the grid - change if necessary
+
 @default-max-width: 980px;
 @default-min-width: 727px;
 @gutter: 4.4%;
+@generate-nonsemantic-grid-classes: true;
+
+// End of configuration - do not change below this line unLESS... ;] -----------
+
+// @TODO check the future releases of LESS.js: do we _really_ need to clutter the global scope?
+@one-col-width:     (100% - 11 * @gutter) / 12;
+@two-col-width:     @one-col-width * 2 + @gutter;
+@three-col-width:   @one-col-width * 3 + @gutter * 2;
+@four-col-width:    @one-col-width * 4 + @gutter * 3;
+@five-col-width:    @one-col-width * 5 + @gutter * 4;
+@six-col-width:     @one-col-width * 6 + @gutter * 5;
+@seven-col-width:   @one-col-width * 7 + @gutter * 6;
+@eight-col-width:   @one-col-width * 8 + @gutter * 7;
+@nine-col-width:    @one-col-width * 9 + @gutter * 8;
+@ten-col-width:     @one-col-width * 10 + @gutter * 9;
+@eleven-col-width:  @one-col-width * 11 + @gutter * 10;
+@twelve-col-width:  @one-col-width * 12 + @gutter * 11;
 
 #grid {
   .col () {
-    .col-gutter();
+    #grid > .col-gutter();
     float: left;
     min-height: 1px;
     position: relative;
     &:first-child {
-      .col-no-gutter();
+      #grid > .col-no-gutter();
     }
   }
 
@@ -38,19 +57,6 @@
     margin: 0 auto;
   }
 
-  @one-col-width:     (100% - 11 * @gutter) / 12;
-  @two-col-width:     @one-col-width * 2 + @gutter;
-  @three-col-width:   @one-col-width * 3 + @gutter * 2;
-  @four-col-width:    @one-col-width * 4 + @gutter * 3;
-  @five-col-width:    @one-col-width * 5 + @gutter * 4;
-  @six-col-width:     @one-col-width * 6 + @gutter * 5;
-  @seven-col-width:   @one-col-width * 7 + @gutter * 6;
-  @eight-col-width:   @one-col-width * 8 + @gutter * 7;
-  @nine-col-width:    @one-col-width * 9 + @gutter * 8;
-  @ten-col-width:     @one-col-width * 10 + @gutter * 9;
-  @eleven-col-width:  @one-col-width * 11 + @gutter * 10;
-  @twelve-col-width:  @one-col-width * 12 + @gutter * 11;
-
   .one-col-width ()     { width: @one-col-width; }
   .two-col-width ()     { width: @two-col-width;  }
   .three-col-width ()   { width: @three-col-width; }
@@ -64,18 +70,18 @@
   .eleven-col-width ()  { width: @eleven-col-width; }
   .twelve-col-width ()  { width: @twelve-col-width; }
 
-  .one-col ()     { .col(); .one-col-width(); }
-  .two-col ()     { .col(); .two-col-width();  }
-  .three-col ()   { .col(); .three-col-width(); }
-  .four-col ()    { .col(); .four-col-width(); }
-  .five-col ()    { .col(); .five-col-width(); }
-  .six-col ()     { .col(); .six-col-width(); }
-  .seven-col ()   { .col(); .seven-col-width();  }
-  .eight-col ()   { .col(); .eight-col-width(); }
-  .nine-col ()    { .col(); .nine-col-width(); }
-  .ten-col ()     { .col(); .ten-col-width(); }
-  .eleven-col ()  { .col(); .eleven-col-width(); }
-  .twelve-col ()  { .col(); .twelve-col-width(); }
+  .one-col ()     { #grid > .col(); #grid > .one-col-width(); }
+  .two-col ()     { #grid > .col(); #grid > .two-col-width();  }
+  .three-col ()   { #grid > .col(); #grid > .three-col-width(); }
+  .four-col ()    { #grid > .col(); #grid > .four-col-width(); }
+  .five-col ()    { #grid > .col(); #grid > .five-col-width(); }
+  .six-col ()     { #grid > .col(); #grid > .six-col-width(); }
+  .seven-col ()   { #grid > .col(); #grid > .seven-col-width();  }
+  .eight-col ()   { #grid > .col(); #grid > .eight-col-width(); }
+  .nine-col ()    { #grid > .col(); #grid > .nine-col-width(); }
+  .ten-col ()     { #grid > .col(); #grid > .ten-col-width(); }
+  .eleven-col ()  { #grid > .col(); #grid > .eleven-col-width(); }
+  .twelve-col ()  { #grid > .col(); #grid > .twelve-col-width(); }
 
   .offset-by-one () {
     margin-left: @one-col-width + @gutter * 2;
@@ -160,4 +166,66 @@
   .pull-n (@n) when (isnumber(@n)) {
     right: (@one-col-width + @gutter) * @n;
   }
+
+  // Non-semantic grid classes
+  //
+  // If you don't need them, disable via the switch at the beginning of this file.
+  .non-semantic-grid (@enable) when (@enable = true) {
+    .grid {
+      .row            { #grid > .row(); }
+      .subrow         { #grid > .subrow(); }
+      .centered       { #grid > .centered(); }
+
+      .one.columns    { #grid > .one-col(); }
+      .two.columns    { #grid > .two-col(); }
+      .three.columns  { #grid > .three-col(); }
+      .four.columns   { #grid > .four-col(); }
+      .five.columns   { #grid > .five-col(); }
+      .six.columns    { #grid > .six-col(); }
+      .seven.columns  { #grid > .seven-col(); }
+      .eight.columns  { #grid > .eight-col(); }
+      .nine.columns   { #grid > .nine-col(); }
+      .ten.columns    { #grid > .ten-col(); }
+      .eleven.columns { #grid > .eleven-col(); }
+      .twelve.columns { #grid > .twelve-col(); }
+  
+      .offset-by-one    { #grid > .offset-by-one(); }
+      .offset-by-two    { #grid > .offset-by-two(); }
+      .offset-by-three  { #grid > .offset-by-three(); }
+      .offset-by-four   { #grid > .offset-by-four(); }
+      .offset-by-five   { #grid > .offset-by-five(); }
+      .offset-by-six    { #grid > .offset-by-six(); }
+      .offset-by-seven  { #grid > .offset-by-seven(); }
+      .offset-by-eight  { #grid > .offset-by-eight(); }
+      .offset-by-nine   { #grid > .offset-by-nine(); }
+      .offset-by-ten    { #grid > .offset-by-ten(); }
+      .offset-by-eleven { #grid > .offset-by-eleven(); }
+    
+      .push-one    { #grid > .push-one(); }
+      .push-two    { #grid > .push-two(); }
+      .push-three  { #grid > .push-three(); }
+      .push-four   { #grid > .push-four(); }
+      .push-five   { #grid > .push-five(); }
+      .push-six    { #grid > .push-six(); }
+      .push-seven  { #grid > .push-seven(); }
+      .push-eight  { #grid > .push-eight(); }
+      .push-nine   { #grid > .push-nine(); }
+      .push-ten    { #grid > .push-ten(); }
+      .push-eleven { #grid > .push-eleven(); }
+    
+      .pull-one    { #grid > .pull-one(); }
+      .pull-two    { #grid > .pull-two(); }
+      .pull-three  { #grid > .pull-three(); }
+      .pull-four   { #grid > .pull-four(); }
+      .pull-five   { #grid > .pull-five(); }
+      .pull-six    { #grid > .pull-six(); }
+      .pull-seven  { #grid > .pull-seven(); }
+      .pull-eight  { #grid > .pull-eight(); }
+      .pull-nine   { #grid > .pull-nine(); }
+      .pull-ten    { #grid > .pull-ten(); }
+      .pull-eleven { #grid > .pull-eleven(); }
+    }
+  }
 }
+
+#grid > .non-semantic-grid(@generate-nonsemantic-grid-classes);
