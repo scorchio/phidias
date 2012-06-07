@@ -21,17 +21,17 @@ table{border-collapse:collapse;border-spacing:0;}
 .grid .ten.columns{margin-left:4.4%;float:left;min-height:1px;position:relative;width:82.6%;}.grid .ten.columns:first-child{margin-left:0;}
 .grid .eleven.columns{margin-left:4.4%;float:left;min-height:1px;position:relative;width:91.3%;}.grid .eleven.columns:first-child{margin-left:0;}
 .grid .twelve.columns{margin-left:4.4%;float:left;min-height:1px;position:relative;width:100%;}.grid .twelve.columns:first-child{margin-left:0;}
-.grid .row .columns .offset-by-one{margin-left:13.100000000000001%;}.grid .row .columns .offset-by-one:first-child{margin-left:8.7%;}
-.grid .row .columns .offset-by-two{margin-left:21.799999999999997%;}.grid .row .columns .offset-by-two:first-child{margin-left:17.4%;}
-.grid .row .columns .offset-by-three{margin-left:30.5%;}.grid .row .columns .offset-by-three:first-child{margin-left:26.099999999999998%;}
-.grid .row .columns .offset-by-four{margin-left:39.199999999999996%;}.grid .row .columns .offset-by-four:first-child{margin-left:34.8%;}
-.grid .row .columns .offset-by-five{margin-left:47.9%;}.grid .row .columns .offset-by-five:first-child{margin-left:43.5%;}
-.grid .row .columns .offset-by-six{margin-left:56.599999999999994%;}.grid .row .columns .offset-by-six:first-child{margin-left:52.199999999999996%;}
-.grid .row .columns .offset-by-seven{margin-left:65.3%;}.grid .row .columns .offset-by-seven:first-child{margin-left:60.89999999999999%;}
-.grid .row .columns .offset-by-eight{margin-left:74%;}.grid .row .columns .offset-by-eight:first-child{margin-left:69.6%;}
-.grid .row .columns .offset-by-nine{margin-left:82.7%;}.grid .row .columns .offset-by-nine:first-child{margin-left:78.3%;}
-.grid .row .columns .offset-by-ten{margin-left:91.4%;}.grid .row .columns .offset-by-ten:first-child{margin-left:87%;}
-.grid .row .columns .offset-by-eleven:first-child{margin-left:95.69999999999999%;}
+.grid .row .columns.offset-by-one{margin-left:13.100000000000001%;}.grid .row .columns.offset-by-one:first-child{margin-left:8.7%;}
+.grid .row .columns.offset-by-two{margin-left:21.799999999999997%;}.grid .row .columns.offset-by-two:first-child{margin-left:17.4%;}
+.grid .row .columns.offset-by-three{margin-left:30.5%;}.grid .row .columns.offset-by-three:first-child{margin-left:26.099999999999998%;}
+.grid .row .columns.offset-by-four{margin-left:39.199999999999996%;}.grid .row .columns.offset-by-four:first-child{margin-left:34.8%;}
+.grid .row .columns.offset-by-five{margin-left:47.9%;}.grid .row .columns.offset-by-five:first-child{margin-left:43.5%;}
+.grid .row .columns.offset-by-six{margin-left:56.599999999999994%;}.grid .row .columns.offset-by-six:first-child{margin-left:52.199999999999996%;}
+.grid .row .columns.offset-by-seven{margin-left:65.3%;}.grid .row .columns.offset-by-seven:first-child{margin-left:60.89999999999999%;}
+.grid .row .columns.offset-by-eight{margin-left:74%;}.grid .row .columns.offset-by-eight:first-child{margin-left:69.6%;}
+.grid .row .columns.offset-by-nine{margin-left:82.7%;}.grid .row .columns.offset-by-nine:first-child{margin-left:78.3%;}
+.grid .row .columns.offset-by-ten{margin-left:91.4%;}.grid .row .columns.offset-by-ten:first-child{margin-left:87%;}
+.grid .row .columns.offset-by-eleven:first-child{margin-left:95.69999999999999%;}
 .grid .push-one{left:8.7%;}
 .grid .push-two{left:17.4%;}
 .grid .push-three{left:26.099999999999998%;}
