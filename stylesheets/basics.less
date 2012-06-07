@@ -29,6 +29,21 @@ header, footer {
     margin-top: 15px;
 }
 
+a {
+    color: @blue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: @cyan;
+    text-decoration: underline;
+}
+
+a:checked {
+    color: @red;
+    text-decoration: none;
+}
+
 h1 {
     color: @blue;
     font-family: "Helvetica Neue", "Proxima", sans-serif;
@@ -71,4 +86,21 @@ p {
 .text {
     #grid.row();
     padding: 10px 0 5px 0;
+}
+// decorations for non-semantic demo
+// @todo: maybe move to attach.less?
+.columns {
+    background-color: @base2;
+    .rounded-corners(3px);
+    p {
+        margin: 0.5em;
+        padding: 0.5em;
+        color: @base3;
+        background-color: @blue;
+        overflow: hidden;
+        .rounded-corners(3px);
+    }
+}
+.row {
+    padding: 0.1em 0;
 }
