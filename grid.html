@@ -11,12 +11,18 @@
     <meta charset="utf-8">
     <title>Phidias demo grids</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/demo.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Phidias demo grids</h1>
-    </header>
-    <div id="demo-grid">
+<header>
+    <h1>Phidias demo grids</h1>
+</header>
+<div id="demo-grid">
+    <div id="toggle-semantic" class="text">
+        <h2>Semantic</h2>
+    </div>
+    <div id="semantic">
         <div class="sub-title">
             <h2>Basic semantic grid usage</h2>
         </div>
@@ -45,18 +51,18 @@
             <div class="right"><p>.right [.six-col()]</p></div>
         </div>
         <div class="example">
-          <div class="text">
-            <p>HTML</p>
-          </div>
-          <div class="script">
-            <script type="text/javascript" src="https://snipt.net/embed/e07c90be5b0a1ba1a2afbc09197080c7/"></script>
-          </div>
-          <div class="text">
-            <p>LESS</p>
-          </div>
-          <div class="script">
-            <script type="text/javascript" src="https://snipt.net/embed/840b6cce8daab9d16468bebaa1da9d42/"></script>
-          </div>
+            <div id="semantic-basic-html-toggle" class="text">
+                <p>HTML</p>
+            </div>
+            <div id="semantic-basic-html" class="script">
+                <script type="text/javascript" src="https://snipt.net/embed/e07c90be5b0a1ba1a2afbc09197080c7/"></script>
+            </div>
+            <div id="semantic-basic-less-toggle" class="text">
+                <p>LESS</p>
+            </div>
+            <div id="semantic-basic-less" class="script">
+                <script type="text/javascript" src="https://snipt.net/embed/840b6cce8daab9d16468bebaa1da9d42/"></script>
+            </div>
         </div>
 
         <div class="sub-title">
@@ -96,18 +102,18 @@
             <div class="left"><p>.left</p></div>
         </div>
         <div class="example">
-          <div class="text">
-            <p>HTML</p>
-          </div>
-          <div class="script">
-            <script type="text/javascript" src="https://snipt.net/embed/289c1d320a3874930618a656787a6d98/"></script>
-          </div>
-          <div class="text">
-            <p>LESS</p>
-          </div>
-          <div class="script">
-            <script type="text/javascript" src="https://snipt.net/embed/ff35f67b967a966a71891bde27e4eab7/"></script>
-          </div>
+            <div id="semantic-offset-html-toggle" class="text">
+                <p>HTML</p>
+            </div>
+            <div id="semantic-offset-html" class="script">
+                <script type="text/javascript" src="https://snipt.net/embed/289c1d320a3874930618a656787a6d98/"></script>
+            </div>
+            <div id="semantic-offset-less-toggle" class="text">
+                <p>LESS</p>
+            </div>
+            <div id="semantic-offset-less" class="script">
+                <script type="text/javascript" src="https://snipt.net/embed/ff35f67b967a966a71891bde27e4eab7/"></script>
+            </div>
         </div>
         <div class="sub-title">
             <h2>Push & pull</h2>
@@ -239,19 +245,24 @@
             </div>
         </div>
         <div class="example">
-          <div class="text">
-              <p>HTML</p>
-          </div>
-          <div class="script">
-              <script type="text/javascript" src="https://snipt.net/embed/a1b437dd0e8638acb4542fc14fe6e622/"></script>
-          </div>
-          <div class="text">
-              <p>LESS</p>
-          </div>
-          <div class="script">
-              <script type="text/javascript" src="https://snipt.net/embed/b9de7798c477a3f69acc2cd45bf96ab5/"></script>
-          </div>
+            <div id="semantic-pp-html-toggle" class="text">
+                <p>HTML</p>
+            </div>
+            <div id="semantic-pp-html" class="script">
+                <script type="text/javascript" src="https://snipt.net/embed/a1b437dd0e8638acb4542fc14fe6e622/"></script>
+            </div>
+            <div id="semantic-pp-less-toggle" class="text">
+                <p>LESS</p>
+            </div>
+            <div id="semantic-pp-less" class="script">
+                <script type="text/javascript" src="https://snipt.net/embed/b9de7798c477a3f69acc2cd45bf96ab5/"></script>
+            </div>
         </div>
+    </div>
+    <div id="toggle-non-semantic" class="text">
+        <h2>Non-semantic</h2>
+    </div>
+    <div id="non-semantic">
         <div class="sub-title">
             <h2>Non-semantic simple grid</h2>
         </div>
@@ -306,10 +317,10 @@
             </div>
         </div>
 
-        <div class="text">
+        <div id="non-semantic-basic-html-toggle" class="text">
             <p>HTML</p>
         </div>
-        <div class="example">
+        <div id="non-semantic-basic-html" class="example">
             <script type="text/javascript" src="https://snipt.net/embed/a7a84c57f5aaad25fc40591dc040dbae/"></script>
         </div>
         <div class="sub-title">
@@ -350,10 +361,10 @@
                 <div class="one columns offset-by-eleven"><p>.off<!--set-by-eleven--></p></div>
             </div>
         </div>
-        <div class="text">
+        <div id="non-semantic-offset-html-toggle" class="text">
             <p>HTML</p>
         </div>
-        <div class="example">
+        <div id="non-semantic-offset-html" class="example">
             <script type="text/javascript" src="https://snipt.net/embed/f48bf05fe2ddf7da7db982b19c013ca6/"></script>
         </div>
         <div class="sub-title">
@@ -495,16 +506,18 @@
                 </div>
             </div>
         </div>
-        <div class="text">
+        <div id="non-semantic-pp-html-toggle" class="text">
             <p>HTML</p>
         </div>
-        <div class="example">
+        <div id="non-semantic-pp-html" class="example">
             <script type="text/javascript" src="https://snipt.net/embed/2b071f53c9e8a6e6b7ba5d9493d00eef/"></script>
         </div>
     </div>
-    <footer>
-        <h6><a href="https://github.com/scorchio/phidias">Phidias</a> demo page</h6>
-        <h6>Created by <a href="https://github.com/scorchio">scorchio</a> & <a href="https://github.com/nezuvian">nezuvian</a></h6>
-    </footer>
+</div>
+<footer>
+    <h6><a href="https://github.com/scorchio/phidias">Phidias</a> demo page</h6>
+    <h6>Created by <a href="https://github.com/scorchio">scorchio</a> & <a
+            href="https://github.com/nezuvian">nezuvian</a></h6>
+</footer>
 </body>
 </html>

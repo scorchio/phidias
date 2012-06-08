@@ -56,8 +56,8 @@ h1 {
 h2  {
     color: @base03;
     font-family: "Helvetica Neue", "Proxima", sans-serif;
-    font-size: 18px;
-    font-size: 1.8rem;
+    font-size: 22px;
+    font-size: 2.2rem;
     font-weight: bold;
     margin: 9px 0;
 }
@@ -87,6 +87,32 @@ p {
     #grid.row();
     padding: 10px 0 5px 0;
 }
+
+.text p {
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+
+#semantic, #non-semantic,
+#semantic-basic-html, #semantic-basic-less,
+#semantic-offset-html, #semantic-offset-less,
+#semantic-pp-html, #semantic-pp-less,
+#non-semantic-basic-html, #non-semantic-offset-html,
+#non-semantic-pp-html {
+    display: none;
+    cursor: pointer;
+}
+
+#toggle-semantic h2, #toggle-non-semantic h2 {
+    font-size: 100px;
+    color: @base1;
+}
+
+#toggle-semantic h2:hover, #toggle-non-semantic h2:hover {
+    color: @base03;
+    cursor: pointer;
+}
+
 // decorations for non-semantic demo
 // @todo: maybe move to attach.less?
 .columns {
